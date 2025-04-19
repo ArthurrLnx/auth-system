@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login</title>
+    <link rel="stylesheet" href="./styles/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div id="login-form" class="form-container">
+            <h2>Login</h2>
+            <form id="login">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha:</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="#" id="show-register">Registre-se</a></p>
+        </div>
+
+        <div id="register-form" class="form-container" style="display: none;">
+            <h2>Registro</h2>
+            <form id="register">
+                <div class="form-group">
+                    <label for="register-username">Nome de usuário:</label>
+                    <input type="text" id="register-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Senha:</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <button type="submit">Registrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="#" id="show-login">Faça login</a></p>
+        </div>
+
+        <div id="user-info" style="display: none;">
+            <h2>Bem-vindo, <span id="username-display"></span>!</h2>
+            <button id="logout-btn">Sair</button>
+        </div>
+    </div>
+
+    <script src="./js/auth.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
